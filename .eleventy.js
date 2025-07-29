@@ -1,0 +1,1 @@
+eleventyConfig.addPassthroughCopy("admin");
