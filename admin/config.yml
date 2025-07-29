@@ -3,8 +3,8 @@ backend:
   repo: cbahn/gweirharp
   branch: main
   base_url: https://gweirharp.netlify.app
-  auth_endpoint: api/auth
-  
+  auth_endpoint: .netlify/identity
+
 media_folder: "raw_img/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
