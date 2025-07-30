@@ -1,4 +1,4 @@
 node_modules/
 
 # Eleventy generated pages
-# _site/
+_site/
