@@ -1,35 +1,14 @@
-media: public/img
+media:
+  label: Images
+  input: images
+  output: /images
+  extensions: [ png, webp, jpg ]
+
 content:
-  - name: posts
-    label: Posts
-    type: collection
-    path: content/blog
-    view:
-      fields: [ title, draft, date ]
+  - name: homepage
+    label: Home Page
+    type: file
+    path: src/frontpage.json
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: description, label: Description, type: string }
-      - { name: date, label: Date, type: date }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: body, label: Body, type: rich-text }
-
-  - name: about
-    label: About page
-    type: file
-    path: content/about/index.md
-    fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - name: eleventyNavigation
-        label: Navigation
-        type: object
-        fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
-      - { name: body, label: Body, type: rich-text }
-      
-  - name: metadata
-    label: Metadata
-    type: file
-    path: _data/metadata.js
-    format: code
+      - { name: subtitle, label: Subtitle, type: string }
