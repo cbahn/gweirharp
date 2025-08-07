@@ -1,7 +1,193 @@
----
-layout: index.njk
-title: {{ frontpage.title }}
-subtitle: {{ frontpage.subtitle }}
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gweir Glewwe</title>
 
-Content Missing
+  <!-- importing font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /*
+    green = #4C7C70
+    cream = #E7E4DA
+    accent orange = #FFB500
+    */
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 88svh;
+      background: url('images/large-harp-background.webp') center center / cover no-repeat;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .intro h1 {
+      font-family: "Abhaya Libre", serif;
+      font-weight: 400;
+      font-size: 3rem;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      font-family: "Abhaya Libre", serif;
+      font-weight: 400;
+    }
+
+    .section h2 {
+      margin: 1.6rem 0;
+      font-size: 2.9rem;
+      line-height: 1;
+    }
+
+    .section p {
+      font-size: 1.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .section > .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* About Me */
+    #about-me {
+      background-color: #4C7C70;
+      color: white;
+    }
+
+    #about-me > .wrapper {
+      flex-direction: row-reverse;
+    }
+
+    /* Music Sample */
+    #music-sample > .wrapper {
+      flex-direction: row;
+    }
+
+    /* Contact Info */
+    #contact-info {
+      background-color: #E7E4DA;
+      color: #4D4D4D;
+    }
+
+    #contact-info li {
+      list-style: none;
+
+    }
+    
+    #contact-info a {
+      cursor: pointer;
+      text-decoration: none;
+      color: #726757;
+      font-size: 1.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    #contact-info a:hover {
+      color: #a19d96;
+    }
+
+
+    .text,
+    .image {
+      flex: 0 0 50%;
+      padding: 1rem;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .section > .wrapper {
+        padding: 0 1rem;
+        flex-direction: column;
+      }
+
+      .text,
+      .image {
+        flex: 1 1 100%;
+      }
+
+      .intro h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h1>Harpist Gweir Glewwe</h1>
+  </section>
+
+  <!-- About Me -->
+  <section id="about-me" class="section">
+    <div class="wrapper">
+      <div class="image">
+        <img src="images/pic01.jpg" alt="Artwork 1">
+      </div>
+      <div class="text">
+        <h2>About Me</h2>
+        <p>I play harp in the Minneapolis, MN area. I'm available for weddings, farmer's markets, or other events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- music sample -->
+  <section id="music-sample" class="section">
+    <div class="wrapper">
+      <div class="image">
+        <img src="images/pic02.jpg" alt="Artwork 2">
+      </div>
+      <div class="text">
+        <h2>Sample Music</h2>
+        <p>Coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me -->
+  <section id="contact-info" class="section">
+    <div class="wrapper">
+      <div class="text">
+        <h2>Get In Touch</h2>
+        <p><ul>
+        <li><a href="tel://555-555-0441">555-555-0441</a></li>
+        <li><a href="mailto:example@example.com">example@example.com</a></li>
+        </ul></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
